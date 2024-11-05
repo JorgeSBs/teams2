@@ -1,0 +1,213 @@
+/* Reset y estilo base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f5f7;
+}
+
+.app-container {
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.task-form input, .task-form select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.task-form button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.task-form button:hover {
+    background-color: #45a049;
+}
+
+.kanban-board {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.kanban-column {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.kanban-column h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task-item {
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border-left: 4px solid #4caf50; /* Por defecto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s;
+}
+
+.task-item:hover {
+    transform: translateY(-2px);
+}
+
+.high-priority {
+    border-left-color: #ff5c5c;
+}
+
+.medium-priority {
+    border-left-color: #ffae42;
+}
+
+.low-priority {
+    border-left-color: #4caf50;
+}
+
+.completed-task {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.task-deadline {
+    font-size: 12px;
+    color: #888;
+}
+
+.task-footer {
+    display: flex;
+    gap: 5px;
+    margin-top: 8px;
+    justify-content: flex-end;
+}
+
+/* Estilos para botones de Editar y Eliminar */
+.task-footer button {
+    padding: 5px 10px;
+    font-size: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Botón de Editar */
+.task-footer button:nth-child(1) {
+    background-color: #4c8bf5;
+}
+
+.task-footer button:nth-child(1):hover {
+    background-color: #3b6fd1;
+    transform: scale(1.05);
+}
+
+/* Botón de Eliminar */
+.task-footer button:nth-child(2) {
+    background-color: #f54545;
+}
+
+.task-footer button:nth-child(2):hover {
+    background-color: #d13737;
+    transform: scale(1.05);
+}
+
+/* Efecto de sombra en hover para ambos botones */
+.task-footer button:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .kanban-board {
+        flex-direction: column;
+    }
+}
+/*prueba*/
+/* Contenedor de logo */
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo {
+    width: 200px; /* Tamaño inicial */
+    height: auto;
+    transition: width 0.3s ease; /* Transición para suavizar el cambio de tamaño */
+}
+
+/* Logo responsivo */
+@media (max-width: 768px) {
+    .logo {
+        width: 60px; /* Tamaño del logo en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 50px; /* Tamaño del logo en pantallas extra pequeñas */
+    }
+}
+
+/* Ajuste del contenedor principal para evitar que el logo cubra el título */
+.app-container {
+    margin-top: 80px; /* Espacio para que el logo no cubra el título */
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+
+

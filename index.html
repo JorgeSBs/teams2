@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="/Logo_EQUIPO_Proram.png" alt="Logo de la aplicación" class="logo">
+    </div>
+    <div class="app-container">
+        <h1>Gestión de Tareas</h1>
+        
+        <div class="task-form">
+            <input type="text" id="taskName" placeholder="Nombre de la tarea">
+            <input type="date" id="taskDeadline" placeholder="Fecha límite">
+            <select id="taskPriority">
+                <option value="Alta">Alta</option>
+                <option value="Media">Media</option>
+                <option value="Baja">Baja</option>
+            </select>
+            <button onclick="addTask()">Añadir Tarea</button>
+        </div>
+
+        <div class="kanban-board">
+            <div class="kanban-column">
+                <h2>Alta Prioridad</h2>
+                <div id="highPriorityTasks" class="task-list"></div>
+            </div>
+            <div class="kanban-column">
+                <h2>Media Prioridad</h2>
+                <div id="mediumPriorityTasks" class="task-list"></div>
+            </div>
+            <div class="kanban-column">
+                <h2>Baja Prioridad</h2>
+                <div id="lowPriorityTasks" class="task-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
